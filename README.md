@@ -14,7 +14,7 @@ A barebones web-based control panel for managing fighting game tournament scoreb
 - XML upload for player databases
 - Start.gg import (requires API key - see below)
 
-## Setup
+## Setup (check this!)
 
 1. Clone or download this project
 2. Install dependencies: `npm install`
