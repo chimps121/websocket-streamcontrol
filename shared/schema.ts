@@ -1,25 +1,31 @@
 import { z } from "zod";
 
 export const scoreboardSchema = z.object({
-  player1: z.object({
-    prefix: z.string(),
-    name: z.string(),
-    score: z.number().min(0),
-  }),
-  player2: z.object({
-    prefix: z.string(),
-    name: z.string(),
-    score: z.number().min(0),
-  }),
-  tournamentRound: z.string(),
-  scrollingText: z.string(),
-  scrollingEnabled: z.boolean(),
+  Bracket: z.string(),
+  Schedule: z.string(),
+  comm1: z.string(),
+  comm1Pronoun: z.string(),
+  comm2: z.string(),
+  comm2Pronoun: z.string(),
+  dTimeText: z.string(),
+  game: z.string(),
+  p1Loser: z.string(),
+  p1Name: z.string(),
+  p1Pronoun: z.string(),
+  p1Region: z.string(),
+  p1Score: z.string(),
+  p1Team: z.string(),
+  p2Loser: z.string(),
+  p2Name: z.string(),
+  p2Pronoun: z.string(),
+  p2Region: z.string(),
+  p2Score: z.string(),
+  p2Team: z.string(),
+  round: z.string(),
+  showTimer: z.string(),
+  timerLength: z.string(),
+  timerStart: z.string(),
+  timestamp: z.string(),
 });
 
 export type Scoreboard = z.infer<typeof scoreboardSchema>;
-
-export const startGGImportSchema = z.object({
-  url: z.string().url(),
-});
-
-export type StartGGImport = z.infer<typeof startGGImportSchema>;
